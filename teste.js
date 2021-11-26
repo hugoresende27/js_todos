@@ -23,7 +23,7 @@ function addTodo(todo) {
 
     if(todoText) {
         const todoEl = document.createElement('li')
-        if(todo && todo.completed) {
+        if(todo && todo.feito) {
             todoEl.classList.add('completed')
         }
 
