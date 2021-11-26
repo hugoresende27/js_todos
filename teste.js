@@ -30,7 +30,7 @@ function addTodo(todo) {
         todoEl.innerText = todoText
 
         todoEl.addEventListener('click', () => {//se existir texto que vai ser o value de input 
-            todoEl.classList.toggle('completed')
+            todoEl.classList.toggle('feito')
             updateLS()
         }) 
 
@@ -57,7 +57,7 @@ function updateLS() {
     todosEl.forEach(todoEl => {
         todos.push({
             text: todoEl.innerText,
-            completed: todoEl.classList.contains('completed')
+            completed: todoEl.classList.contains('feito')
         })
     })
 
