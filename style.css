@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Acme&family=Assistant:wght@200;300&family=Baloo+2&family=Cairo:wght@200;600&family=Caveat:wght@400;700&family=Comforter+Brush&family=Exo+2:wght@100;300&family=Indie+Flower&family=Inter:wght@100;500&family=Lato:wght@100;400&family=M+PLUS+1:wght@100;400&family=M+PLUS+2:wght@100;500&family=M+PLUS+Code+Latin:wght@100;400&family=Merriweather:wght@300;700&family=Open+Sans:wght@300;600&family=Roboto+Slab:wght@100;400&family=Signika:wght@300&display=swap');
+
+:root
+{
+    --primary-cor:#409C32;
+    --secondary-cor:#265C1D;
+    --three-cor:#59DB46;
+    --four-cor:#5FE84A;
+    --five-cor:#50C23E;
+    --gold-cor:#FFC857;
+    --charcoal-cor:#2E4052;
+    --purple-cor:#412234;
+    --green-cor:#BDD9BF;
+}
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: var(--purple-cor);
+    font-family: 'Inter',sans-serif;
+    
+    display: flex;          /*coloca tudo em linha*/
+    flex-direction: column; /*coloca tudo em coluna*/
+    align-items: center;    /*alinha horizontalmente*/
+    justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
+    /* height: 100vh; */
+    /*overflow: hidden; /*BARRA DE SCROLL DOWN, HIDDEN ESCONDIDA*/
+    margin: 0;
+    /*overflow-x: hidden; /*REMOVER BARRA DE SCROLL HORIZONTAL*/
+    min-height: 100vh;
+}
+
+.title {
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.main img {
+    object-fit: cover;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+
+/*KEYFRAMES //////////////////////////////////////////////////*/
+
+
+/*///////////////MEDIA QUERYS////////////////////////////////////////////////////////////////////*/
+
+
+
+@media (max-width: 800px)
+{
+    body{
+        overflow:visible;
+    }
+    footer 
+    {
+        /* display: none; */
+    };
+
+}
+
+@media (max-width: 768px){
+    .main {
+        padding: 20px 30px;
+    }
+    .fa-quote{
+        display: none;
+    }
+}
+
+@media (max-width : 600px)
+{
+
+}
+
+@media(max-width: 480px)        /*para ecras mais pequenos*/
+{
+    body{
+        overflow:visible;
+    }
+
+    footer 
+    {
+        display: none;
+    };
+
+}
+
+/*estilos do footer */
+
+footer{
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 900;
+    font-family:'Inconsolata',sans-serif ;
+    text-align: center;
+    /* border: 1px solid var(--charcoal-cor); */
+     position: absolute;
+    top: 3rem; 
+    /*margin-top: 50px; */
+    
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+    padding: 0rem 0.9rem;
+    position: fixed;
+}
+
+footer:hover{
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    transform: translate(-50%,-50%) scale(1.2);
+}
+footer:hover a{
+    color: yellow;
+    font-weight: 700;
+}
+footer:hover a:hover{
+    font-weight: 900;
+    color:greenyellow;
+}
+
+footer a{
+   color: #fff;  /*cor dos links a preto*/
+   text-decoration: none;     /*retira o sublinhado dos links*/
+  
+}
+
+footer a:hover{
+    color: var(--gold-cor);
+}
+/* .fot{
+    text-align: center;
+} */
+
+
+
+
