@@ -19,41 +19,72 @@
 body
 {
     background-color: var(--purple-cor);
-    font-family: 'Inter',sans-serif;
-    
+    font-family: 'Caveat',sans-serif;
+    font-weight: 800;
     display: flex;          /*coloca tudo em linha*/
     flex-direction: column; /*coloca tudo em coluna*/
     align-items: center;    /*alinha horizontalmente*/
     justify-content: center;/*alinha tudo verticalmente com uso de height:100vh*/
-    /* height: 100vh; */
-    /*overflow: hidden; /*BARRA DE SCROLL DOWN, HIDDEN ESCONDIDA*/
+    height: 100vh;
+    overflow: hidden; /*BARRA DE SCROLL DOWN, HIDDEN ESCONDIDA*/
     margin: 0;
     /*overflow-x: hidden; /*REMOVER BARRA DE SCROLL HORIZONTAL*/
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
-.title {
-    margin: 10px 0 0;
+h1{
+    color: rgba(179,131,226);
+    font-size: 8rem;
     text-align: center;
+    opacity: 0.4;
+    margin: 0 auto;
+}
+small{
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
-.main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1000px;
-}
-
-.main img {
-    object-fit: cover;
-    margin: 10px;
-    height: 300px;
-    width: 300px;
+form {
+    box-shadow: 0 4px 10px rgb(231, 226, 226);
     max-width: 100%;
-    border-radius: 20px;
+    width: 400px;
 }
 
+.input {
+    border: none;
+    color:#444;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    display: block;
+    width: 100%;
+}
+
+.input::placeholder{
+    color:#d5d5d5;
+}
+.input:focus{
+    outline-color: rgba(179,131,226);;
+}
+
+.todos{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.todos li{
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+
+}
+
+.todos li.feito{
+    color: #b6b6b6;
+    text-decoration: line-through;
+}
 
 /*KEYFRAMES //////////////////////////////////////////////////*/
 
@@ -75,12 +106,7 @@ body
 }
 
 @media (max-width: 768px){
-    .main {
-        padding: 20px 30px;
-    }
-    .fa-quote{
-        display: none;
-    }
+  
 }
 
 @media (max-width : 600px)
